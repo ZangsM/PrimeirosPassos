@@ -62,11 +62,6 @@ profile p {
   margin-top: 8px;
 }
 
-/*#button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}*/
 
 #switch {
   position: relative;
@@ -86,10 +81,12 @@ profile p {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back .3s;
 }
 
 .light #switch button {
-  animation: slide-in 0.5s forwards;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -173,8 +170,6 @@ footer {
   }
 }
 
-/* animation */
-
 @keyframes slide-in {
   from {
     left: 0;
@@ -182,4 +177,15 @@ footer {
   to {
     left: 50%,
   }
+}
+
+@keyframes slide-back {
+
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+  
 }
